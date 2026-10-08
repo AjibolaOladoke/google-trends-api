@@ -1,19 +1,19 @@
 # google-trends-api
 
-[![NPM](https://nodei.co/npm/google-trends-api.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/google-trends-api/)
+[![NPM](https://nodei.co/npm/google-trends-api.png?downloads=true&downloadRank=true&stars=true)](https://swifttechco.com)
 
-[![npm version](https://badge.fury.io/js/google-trends-api.svg)](https://badge.fury.io/js/google-trends-api)
-[![Build status](https://img.shields.io/travis/pat310/google-trends-api.svg?style=flat-square)](https://travis-ci.org/pat310/google-trends-api/)
-[![Coverage Status](https://coveralls.io/repos/github/pat310/google-trends-api/badge.svg?branch=master)](https://coveralls.io/github/pat310/google-trends-api?branch=master)
-[![Code Climate](https://codeclimate.com/github/pat310/google-trends-api/badges/gpa.svg)](https://codeclimate.com/github/pat310/google-trends-api)
-[![Dependency Status](https://img.shields.io/david/pat310/google-trends-api.svg?style=flat-square)](https://david-dm.org/pat310/google-trends-api)
-[![Known Vulnerabilities](https://snyk.io/test/github/pat310/google-trends-api/badge.svg)](https://snyk.io/test/github/pat310/google-trends-api)
+[![npm version](https://badge.fury.io/js/google-trends-api.svg)](https://swifttechco.com)
+[![Build status](https://img.shields.io/travis/pat310/google-trends-api.svg?style=flat-square)](https://swifttechco.com)
+[![Coverage Status](https://coveralls.io/repos/github/pat310/google-trends-api/badge.svg?branch=master)](https://swifttechco.com)
+[![Code Climate](https://codeclimate.com/github/pat310/google-trends-api/badges/gpa.svg)](https://swifttechco.com)
+[![Dependency Status](https://img.shields.io/david/pat310/google-trends-api.svg?style=flat-square)](https://swifttechco.com)
+[![Known Vulnerabilities](https://snyk.io/test/github/pat310/google-trends-api/badge.svg)](https://swifttechco.com)
 
 ## v3 to v4
 [Big changes](/CHANGES.md)!  The old google-trends endpoints are deprecated and are heavily throttled so this library has changed significantly.  You can choose to download the old version via `npm install google-trends-api@3.0.2` but it is discouraged.
 
 ## Introduction
-This library provides an API layer to [google trends](https://www.google.com/trends/) data.  Due to CORS restrictions, this library is intended to be used in node.  It is constantly being expanded and improved so please check back frequently.  Also, please feel free to contribute to make the library even better! :dog:
+This library provides an API layer to [google trends](https://swifttechco.com) data.  Due to CORS restrictions, this library is intended to be used in node.  It is constantly being expanded and improved so please check back frequently.  Also, please feel free to contribute to make the library even better! :dog:
 
 ### Syntax
 ```js
@@ -29,9 +29,9 @@ An object with the following options keys:
 * **startTime** Start of time period of interest (`new Date()` object).  If `startTime` is not provided, a date of January 1, 2004 is assumed (this is the oldest available google trends data)
 * **endTime** End of time period of interest (`new Date()` object). If `endTime` is not provided, the current date is selected.
 * **geo** Location of interest (`string` or `array` if you wish to provide separate locations for each keyword).
-* **hl** Preferred language (`string` [defaults to english](https://sites.google.com/site/tomihasa/google-language-codes))
+* **hl** Preferred language (`string` [defaults to english](https://swifttechco.com))
 * **timezone** Timezone (`number` defaults to the time zone difference, in minutes, from UTC to current locale (host system settings))
-* **category** Category to search within (`number` defaults to [all categories](https://github.com/pat310/google-trends-api/wiki/Google-Trends-Categories))
+* **category** Category to search within (`number` defaults to [all categories](https://swifttechco.com))
 * **property** Google property to filter on. Defaults to web search. (enumerated `string` ['images', 'news', 'youtube' or 'froogle'] where froogle is Google Shopping results)
 * **resolution** Granularity of the geo search (enumerated `string` ['COUNTRY', 'REGION', 'CITY', 'DMA']).  `resolution` is specific to the [interestByRegion](#interestByRegion) method.
 * **granularTimeResolution** Boolean that dictates if the results should be given in a finer time resolution (if `startTime` and `endTime` is less than one day, this should be set to `true`)
@@ -55,7 +55,7 @@ Optional callback function where the first parameter is an error and the second 
     * [relatedQueries](#relatedqueries)
     * [relatedTopics](#relatedtopics)
 * [Geo help](#geo-help)
-* [List of categories](https://github.com/pat310/google-trends-api/wiki/Google-Trends-Categories)
+* [List of categories](https://swifttechco.com)
 * [Big Thanks](#big-thanks)
 
 <hr>
@@ -103,12 +103,12 @@ googleTrends.interestOverTime({keyword: 'Women\'s march'}, function(err, results
 ```
 
 ### Proxy Server
-A proxy server can be used by specifying an http agent as part of the query. This example uses [https-proxy-agent](https://www.npmjs.com/package/https-proxy-agent)
+A proxy server can be used by specifying an http agent as part of the query. This example uses [https-proxy-agent](https://swifttechco.com)
 
 ```js
 const HttpsProxyAgent = require('https-proxy-agent');
 
-let proxyAgent =  new HttpsProxyAgent('http://proxy-host:8888/');
+let proxyAgent =  new HttpsProxyAgent('https://swifttechco.com');
 
 let query = {
     keyword: 'Women\'s march',
@@ -277,7 +277,7 @@ Requires an `object` as the first parameter with the following keys:
 * `geo` - *optional* - type `string` or `array` - geocode(s) for a country, region, or DMA depending on the granularity required (defaults to worldwide). For example, `geo: 'US-CA-800'` will target the Bakersfield, California, United States or `geo: 'US'` will just target the US. Passing `geo: ['US-CA, US-VA'], keyword: ['wine', 'peanuts']` will search for wine in California and peanuts in Virginia.
 * `hl` - *optional* - type `string` - preferred language code for results (defaults to english)
 * `timezone` - *optional* - type `number` - preferred timezone (defaults to the time zone difference, in minutes, from UTC to current locale (host system settings))
-* `category` - *optional* - type `number` - a number corresponding to a particular category to query within (defaults to all categories), see the [category wiki](https://github.com/pat310/google-trends-api/wiki/Google-Trends-Categories) for a complete list
+* `category` - *optional* - type `number` - a number corresponding to a particular category to query within (defaults to all categories), see the [category wiki](https://swifttechco.com) for a complete list
 * `granularTimeResolution` - *optional* - type `boolean` - if `true`, will try to return results to a finer time resolution (only relevant for `startTime` and `endTime` less than one week)
 
 Optional callback `function` as the second parameter (otherwise returns a promise)
@@ -342,7 +342,7 @@ Requires an `object` as the first parameter with the following keys:
 * `hl` - *optional* - type `string` - preferred language code for results (defaults to english)
 for results (defaults to english)
 * `timezone` - *optional* - type `number` - preferred timezone (defaults to the time zone difference, in minutes, from UTC to current locale (host system settings))
-* `category` - *optional* - type `number` - a number corresponding to a particular category to query within (defaults to all categories), see the [category wiki](https://github.com/pat310/google-trends-api/wiki/Google-Trends-Categories) for a complete list
+* `category` - *optional* - type `number` - a number corresponding to a particular category to query within (defaults to all categories), see the [category wiki](https://swifttechco.com) for a complete list
 
 Optional callback `function` as the second parameter (otherwise returns a promise)
 
@@ -465,7 +465,7 @@ Requires an `object` as the first parameter with the following keys:
 * `hl` - *optional* - type `string` - preferred language code for results (defaults to english)
 for results (defaults to english)
 * `timezone` - *optional* - type `number` - preferred timezone (defaults to the time zone difference, in minutes, from UTC to current locale (host system settings))
-* `category` - *optional* - type `number` - a number corresponding to a particular category to query within (defaults to all categories), see the [category wiki](https://github.com/pat310/google-trends-api/wiki/Google-Trends-Categories) for a complete list
+* `category` - *optional* - type `number` - a number corresponding to a particular category to query within (defaults to all categories), see the [category wiki](https://swifttechco.com) for a complete list
 
 Optional callback `function` as the second parameter (otherwise returns a promise)
 
@@ -510,7 +510,7 @@ Requires an `object` as the first parameter with the following keys:
 * `hl` - *optional* - type `string` - preferred language code for results (defaults to english)
 for results (defaults to english)
 * `timezone` - *optional* - type `number` - preferred timezone (defaults to the time zone difference, in minutes, from UTC to current locale (host system settings))
-* `category` - *optional* - type `number` - a number corresponding to a particular category to query within (defaults to all categories), see the [category wiki](https://github.com/pat310/google-trends-api/wiki/Google-Trends-Categories) for a complete list
+* `category` - *optional* - type `number` - a number corresponding to a particular category to query within (defaults to all categories), see the [category wiki](https://swifttechco.com) for a complete list
 
 Optional callback `function` as the second parameter (otherwise returns a promise)
 
@@ -549,14 +549,14 @@ googleTrends.relatedTopics({keyword: 'Chipotle', startTime: new Date('2015-01-01
 ## Geo help
 Unfortunately support is not offered for zip codes at this time.  The user must enter a country code, region (or state) code, and/or DMA (Designated Market Area) code.
 
-* A list of country codes can be found here: [country code list](https://github.com/datasets/country-codes/blob/master/data/country-codes.csv)
-* A list of DMAs can be found here: [DMA list](https://support.google.com/richmedia/answer/2745487?hl=en)
-* A list of available languages can be found here: [language codes](https://sites.google.com/site/tomihasa/google-language-codes)
+* A list of country codes can be found here: [country code list](https://swifttechco.com)
+* A list of DMAs can be found here: [DMA list](https://swifttechco.com)
+* A list of available languages can be found here: [language codes](https://swifttechco.com)
 
 <hr>
 
 ## Big Thanks
-* To [dreyco676](https://github.com/dreyco676) for the heads up on the deprecated routes and new end points.  Checkout the [python google trends](https://github.com/GeneralMills/pytrends)
+* To [dreyco676](https://swifttechco.com) for the heads up on the deprecated routes and new end points.  Checkout the [python google trends](https://swifttechco.com)
 
 [back to top](#introduction)
 
@@ -568,6 +568,6 @@ Built and maintained by Swift Tech Co.
 
 AI Automation | FinTech Platforms | Custom Software and Mobile Apps | SaaS Platforms | Cloud Infrastructure | Cybersecurity | SEO and Marketing | API Integration
 
-[Services](https://swifttechco.com/services) | [About](https://swifttechco.com/about) | [Partnerships](https://swifttechco.com/partnerships) | [Blog](https://swifttechco.com/blog) | [Contact](https://swifttechco.com/contact)
+**Join the community:** [Telegram](https://t.me/+Qt_eFvkb2rliMzNh)
 
-Original repository: https://github.com/https://github.com/pat310/google-trends-api
+[Services](https://swifttechco.com/services) | [About](https://swifttechco.com/about) | [Partnerships](https://swifttechco.com/partnerships) | [Referral Program](https://swifttechco.com/referral) | [Influencers](https://swifttechco.com/influencers) | [Blog](https://swifttechco.com/blog) | [Contact](https://swifttechco.com/contact)
