@@ -2,7 +2,7 @@
 
 ## Images
 
-[![google-trends-api](https://opengraph.githubassets.com/1/https://github.com/pat310/google-trends-api)](https://www.swifttechco.com)
+[![google-trends-api](https://opengraph.githubassets.com/1/pat310/google-trends-api)](https://www.swifttechco.com)
 
 
 [![NPM](https://nodei.co/npm/google-trends-api.png?downloads=true&downloadRank=true&stars=true)](https://swifttechco.com)
