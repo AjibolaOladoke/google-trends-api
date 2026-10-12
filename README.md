@@ -6,7 +6,7 @@ Every project needs a shelf of ready answers. product and engineering is one of 
 
 ## Images
 
-[![google-trends-api](images/preview.png)](https://github.com/Swift-Tech-Co)
+[![google-trends-api](images/preview.png)](https://github.com/Swift-Tech-Co/google-trends-api)
 
 ## v3 to v4
 [Big changes](/CHANGES.md)!  The old google-trends endpoints are deprecated and are heavily throttled so this library has changed significantly.  You can choose to download the old version via `npm install google-trends-api@3.0.2` but it is discouraged.
@@ -107,7 +107,7 @@ A proxy server can be used by specifying an http agent as part of the query. Thi
 ```js
 const HttpsProxyAgent = require('https-proxy-agent');
 
-let proxyAgent =  new HttpsProxyAgent('https://swifttechco.com');
+let proxyAgent =  new HttpsProxyAgent('https://github.com/Swift-Tech-Co/google-trends-api');
 
 let query = {
     keyword: 'Women\'s march',
@@ -134,7 +134,6 @@ googleTrends.interestOverTime({keyword: ['Women\'s march', 'Trump Inauguration']
   console.error('Oh no there was an error', err);
 });
 ```
-
 
 ### Examples
 There are examples available for each API method in the root directory of the module.  **Note:** Each example in [examples.js](/examples.js) needs to be uncommented.
@@ -538,9 +537,7 @@ googleTrends.relatedTopics({keyword: 'Chipotle', startTime: new Date('2015-01-01
 
 [back to top](#introduction)
 
-
 <hr>
-
 
 <hr>
 
@@ -572,13 +569,21 @@ Home | Services | Careers | Referral Program | Influencers | About | Contact
 
 **Connect**
 
-- Website: swifttechco.com
+- Website: https://github.com/Swift-Tech-Co/google-trends-api
 - LinkedIn: [linkedin.com/in/stephenoladoke](https://www.linkedin.com/in/stephenoladoke/)
 - LinkedIn (Company): [linkedin.com/company/swift-tech-co](https://www.linkedin.com/company/swift-tech-co)
 - X: [@MrOladoke](https://x.com/MrOladoke)
 - Instagram: [@mr.oladoke](https://www.instagram.com/mr.oladoke/)
 - Instagram (Company): [@swifttechco](https://www.instagram.com/swifttechco/)
 - Organization: [github.com/Swift-Tech-Co](https://github.com/Swift-Tech-Co)
+
+## Sources
+
+Compiled and maintained from upstream [pat310/google-trends-api](https://github.com/pat310/google-trends-api) under permissive open-source license.
+
+---
+
+Maintained by [Swift Tech Co.](https://github.com/Swift-Tech-Co) - [Telegram](https://t.me/+Qt_eFvkb2rliMzNh)
 
 ## Sources
 
